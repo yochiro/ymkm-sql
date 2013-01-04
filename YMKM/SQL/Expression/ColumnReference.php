@@ -91,11 +91,13 @@ final class YMKM_SQL_Expression_ColumnReference
                                                       ' tables in domain have a column definition with that name or alias.');
                 }
             }
+/* Don't enforce this
             elseif (0 === $defCnt) {
                 throw new YMKM_SQL_ParseException('Column `' . $name .
                                                   '\' reference is unknown: ' .
                                                   ' no tables in domain have a column definition with that name or alias.');
             }
+*/
         }
         return parent::doParse($domain);
     }
@@ -128,15 +130,15 @@ final class YMKM_SQL_Expression_ColumnReference
                     break;
                 }
             }
-        }
 
-        if (is_null($tDef)) {
-            throw new YMKM_SQL_ParseException('ColumnReference('. $name . '):: ' .
-                                              'Table reference `' . $tRef .
-                                              '\' is not defined in the domain');
-        }
-        else {
-            $tRef = (!is_null($tDef->alias())?$tDef->alias():$tDef->name());
+            if (is_null($tDef)) {
+                throw new YMKM_SQL_ParseException('ColumnReference('. $name . '):: ' .
+                                                  'Table reference `' . $tRef .
+                                                  '\' is not defined in the domain');
+            }
+            else {
+                $tRef = (!is_null($tDef->alias())?$tDef->alias():$tDef->name());
+            }
         }
 
         return (!is_null($tRef)?$tRef.'.':'') .  $name;

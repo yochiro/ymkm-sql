@@ -2,7 +2,7 @@
 /**
  *
  * @package ymkm-sql
- * @author Yoann Mikami <yoann.mikami@gmail.com>
+ * @author Yoann Mikami <yoann@ymkm.org>
  */
 
 /**

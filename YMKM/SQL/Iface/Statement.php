@@ -5,6 +5,11 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Entity.php');
+require_once(__DIR__.'/Parseable.php');
+
+
 /**
  * Defines interface for SQL statement parts in queries
  *

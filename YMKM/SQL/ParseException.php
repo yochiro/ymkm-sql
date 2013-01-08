@@ -5,6 +5,10 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/../Exception.php');
+
+
 /**
  * Parse SQL exception
  *

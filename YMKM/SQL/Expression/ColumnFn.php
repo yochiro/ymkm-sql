@@ -5,6 +5,12 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Abstract.php');
+require_once(__DIR__.'/Decorator.php');
+require_once(__DIR__.'/../Domain.php');
+
+
 /**
  * Decorator class for column expressions providing decoration through lambda fn
  *

@@ -5,6 +5,11 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractWhere.php');
+require_once(__DIR__.'/../Domain.php');
+
+
 /**
  * Stateful class which defines an SQL expression to be evaluated inside WHERE/JOIN conditions
  *

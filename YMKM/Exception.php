@@ -5,7 +5,7 @@
  */
 
 /**
- * Used for all YMKM_Db exceptions
+ * Used for all YMKM_SQL exceptions
  *
  * @package ymkm-sql
  */

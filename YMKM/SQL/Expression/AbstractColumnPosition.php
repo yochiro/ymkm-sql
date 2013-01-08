@@ -5,6 +5,13 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Abstract.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Iface/GroupAware.php');
+require_once(__DIR__.'/../Iface/OrderAware.php');
+
+
 /**
  * Abstract class which defines an SQL expression for a column position
  *

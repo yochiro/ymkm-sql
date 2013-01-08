@@ -5,6 +5,13 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractColumnDefinition.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../ParseException.php');
+require_once(__DIR__.'/../Iface/TableRef.php');
+
+
 /**
  * Stateful class which defines an SQL expression for a column definition
  *
@@ -35,7 +42,7 @@ final class YMKM_SQL_Expression_ColumnDefinition
 
     /**
      * Table reference
-     * @var YMKM_SQL_Expression_Iface_TableRef
+     * @var YMKM_SQL_Iface_TableRef
      */
     private $_tableRef = null;
 
@@ -50,13 +57,6 @@ final class YMKM_SQL_Expression_ColumnDefinition
 
     /**
      * @see YMKM_SQL_Expression_AbstractColumnDefinition
-     *
-     * If table reference responds to getTableInfo, then
-     * it must be handling tables from object names.
-     * In that case, the column name could be an alias
-     * defined in the YMKM_TableInfo associated with the
-     * object name. Check if it has such column or alias,
-     * and return the column name in any case.
      */
     protected function doName()
     {

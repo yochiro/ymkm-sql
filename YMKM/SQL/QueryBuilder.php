@@ -5,6 +5,34 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Domain.php');
+require_once(__DIR__.'/Query.php');
+require_once(__DIR__.'/ParseException.php');
+require_once(__DIR__.'/Entity/From.php');
+require_once(__DIR__.'/Entity/Group.php');
+require_once(__DIR__.'/Entity/Join.php');
+require_once(__DIR__.'/Entity/Limit.php');
+require_once(__DIR__.'/Entity/Order.php');
+require_once(__DIR__.'/Entity/Select.php');
+require_once(__DIR__.'/Entity/Where.php');
+require_once(__DIR__.'/Expression/Arithmetic.php');
+require_once(__DIR__.'/Expression/ColumnDefinition.php');
+require_once(__DIR__.'/Expression/ColumnFn.php');
+require_once(__DIR__.'/Expression/ColumnPosition.php');
+require_once(__DIR__.'/Expression/ColumnReference.php');
+require_once(__DIR__.'/Expression/Null.php');
+require_once(__DIR__.'/Expression/TableDefinition.php');
+require_once(__DIR__.'/Expression/TableReference.php');
+require_once(__DIR__.'/Expression/Where.php');
+require_once(__DIR__.'/Iface/ColumnDef.php');
+require_once(__DIR__.'/Iface/ColumnRef.php');
+require_once(__DIR__.'/Iface/OrderAware.php');
+require_once(__DIR__.'/Iface/TableDef.php');
+require_once(__DIR__.'/Iface/TableRef.php');
+require_once(__DIR__.'/../Exception.php');
+
+
 /**
  * Helper class to build SQL query using YMKM_SQL_Query object
  *

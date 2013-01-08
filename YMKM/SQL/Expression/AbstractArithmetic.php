@@ -5,6 +5,14 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Abstract.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Iface/HavingAware.php');
+require_once(__DIR__.'/../Iface/SelectAware.php');
+require_once(__DIR__.'/../Iface/WhereAware.php');
+
+
 /**
  * Abstract class which defines an arithmetic SQL expression
  *

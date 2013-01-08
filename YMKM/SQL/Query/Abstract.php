@@ -5,6 +5,22 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Entity/From.php');
+require_once(__DIR__.'/../Entity/Group.php');
+require_once(__DIR__.'/../Entity/Having.php');
+require_once(__DIR__.'/../Entity/Join.php');
+require_once(__DIR__.'/../Entity/Limit.php');
+require_once(__DIR__.'/../Entity/Order.php');
+require_once(__DIR__.'/../Entity/Select.php');
+require_once(__DIR__.'/../Entity/Where.php');
+require_once(__DIR__.'/../Iface/Entity.php');
+require_once(__DIR__.'/../Iface/WhereAware.php');
+require_once(__DIR__.'/../ParseException.php');
+require_once(__DIR__.'/../../Exception.php');
+
+
 /**
  * Abstract class to provide an interface for SQL queries (DML) through an object
  *

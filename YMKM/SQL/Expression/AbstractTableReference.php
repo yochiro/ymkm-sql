@@ -5,6 +5,13 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractReference.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../ParseException.php');
+require_once(__DIR__.'/../Iface/TableRef.php');
+
+
 /**
  * Abstract class which defines an SQL expression for a table reference
  *

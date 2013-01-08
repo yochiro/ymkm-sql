@@ -5,6 +5,9 @@
  */
 
 
+require_once(__DIR__.'/SQL/QueryBuilder.php');
+
+
 /**
  * Builds query using the YMKM_SQL_QueryBuilder API
  *

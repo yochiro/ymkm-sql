@@ -5,6 +5,10 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractColumnPosition.php');
+
+
 /**
  * Stateful class which defines an SQL expression for a column position
  *

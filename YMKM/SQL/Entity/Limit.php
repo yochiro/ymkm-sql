@@ -5,6 +5,11 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractLimit.php');
+require_once(__DIR__.'/../Domain.php');
+
+
 /**
  * Stateful class which defines entities valid inside a LIMIT part of an SQL query
  *

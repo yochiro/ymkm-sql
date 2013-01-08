@@ -5,6 +5,9 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+require_once(__DIR__.'/Parseable.php');
+
+
 /**
  * Interface to SQL expressions useable as GROUP BY s-exprs in SQL queries
  *

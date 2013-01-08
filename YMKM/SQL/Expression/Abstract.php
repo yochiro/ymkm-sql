@@ -5,6 +5,12 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Iface/Expression.php');
+require_once(__DIR__.'/../Iface/Parseable.php');
+
+
 /**
  * Abstract class which defines SQL expression, units that form an SQL entity
  *

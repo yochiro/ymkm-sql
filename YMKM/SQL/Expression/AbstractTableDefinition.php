@@ -5,6 +5,15 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractDefinition.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../ParseException.php');
+require_once(__DIR__.'/../Iface/FromAware.php');
+require_once(__DIR__.'/../Iface/TableDef.php');
+require_once(__DIR__.'/../Iface/TableRef.php');
+
+
 /**
  * Abstract class which defines an SQL expression for a table definition
  *

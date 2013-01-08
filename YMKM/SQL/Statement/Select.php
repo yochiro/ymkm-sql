@@ -5,6 +5,11 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Base.php');
+require_once(__DIR__.'/../Domain.php');
+
+
 /**
  * Defines statement for SELECT part of an SQL query
  *

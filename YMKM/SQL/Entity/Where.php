@@ -5,6 +5,12 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractWhere.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Iface/WhereAware.php');
+
+
 /**
  * Stateful class which defines entities valid inside a WHERE part of an SQL query
  *

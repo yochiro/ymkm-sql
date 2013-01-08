@@ -5,6 +5,13 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractJoin.php');
+require_once(__DIR__.'/AbstractWhere.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Iface/FromAware.php');
+
+
 /**
  * Stateful class which defines entities valid inside a JOIN part of an SQL query
  *
@@ -26,9 +33,9 @@ final class YMKM_SQL_Entity_Join extends YMKM_SQL_Entity_AbstractJoin
 
     /**
      * Join conditions
-     * @var YMKM_SQL_Entity_Where
+     * @var array[YMKM_SQL_Entity_Where]
      */
-    private $_joinCols = null;
+    private $_joinCols = array();
 
 
     /**
@@ -39,12 +46,7 @@ final class YMKM_SQL_Entity_Join extends YMKM_SQL_Entity_AbstractJoin
      */
     public function augment(YMKM_SQL_Entity_AbstractWhere $jConds)
     {
-        $newExpr = new YMKM_SQL_Expression_Where(
-                        array($this->_joinCols, $jConds),
-                        null,
-                        function($e, $f) { return $e.' AND '.$f; },
-                        null);
-        $this->_joinCols = $newExpr;
+        $this->_joinCols[] = $newExpr;
         return $this;
     }
 
@@ -60,7 +62,7 @@ final class YMKM_SQL_Entity_Join extends YMKM_SQL_Entity_AbstractJoin
     {
         $this->setTarget($t);
         $this->setJoinType($jType);
-        $this->_joinCols = $jConds;
+        $this->_joinCols[] = $jConds;
     }
 
 
@@ -101,9 +103,9 @@ final class YMKM_SQL_Entity_Join extends YMKM_SQL_Entity_AbstractJoin
      */
     protected function doParse(YMKM_SQL_Domain $domain)
     {
-        // Parse join conditions first if set
-        $parsed = (!is_null($this->_joinCols))?
-                  $this->_joinCols->parse($domain):'';
+        $parsed = array_reduce(
+                    array_map(function($e) use (&$domain) { $e->parse($domain); }, $this->_joinCols),
+                    function($e, $f) { return (null !== $e)?$e.' AND ('.$f.')':$f; }, null);
 
         // Returns target->parse [AS target->alias] [ON (jConds->parse)]
         return $this->_target->parse($domain) .

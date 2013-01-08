@@ -5,6 +5,11 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractTableReference.php');
+require_once(__DIR__.'/../Domain.php');
+
+
 /**
  * Stateful class which defines an SQL expression for a table reference
  *

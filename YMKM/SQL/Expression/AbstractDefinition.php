@@ -5,6 +5,10 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Abstract.php');
+
+
 /**
  * Abstract class which defines an SQL expression which defines a new entity in the domain
  *

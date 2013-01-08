@@ -5,6 +5,10 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/../Domain.php');
+
+
 /**
  * Interface to classes which should respond to the parse($domain) method
  *

@@ -5,6 +5,13 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../ParseException.php');
+require_once(__DIR__.'/../Iface/Entity.php');
+require_once(__DIR__.'/../Iface/Statement.php');
+
+
 /**
  * Defines abstract class which represent basic fules for SQL statement in queries
  *

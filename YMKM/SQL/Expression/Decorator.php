@@ -5,6 +5,15 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Abstract.php');
+require_once(__DIR__.'/../Iface/GroupAware.php');
+require_once(__DIR__.'/../Iface/HavingAware.php');
+require_once(__DIR__.'/../Iface/OrderAware.php');
+require_once(__DIR__.'/../Iface/SelectAware.php');
+require_once(__DIR__.'/../Iface/WhereAware.php');
+
+
 /**
  * Abstract class which defines a decorator for any expression
  *

@@ -5,6 +5,12 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Abstract.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Iface/Entity.php');
+
+
 /**
  * Abstract class which defines entities that can be defined in an SQL query
  *

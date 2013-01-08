@@ -5,6 +5,11 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Abstract.php');
+require_once(__DIR__.'/../Iface/GroupAware.php');
+
+
 /**
  * Abstract class which entities valid inside a GROUP BY part of an SQL query
  *

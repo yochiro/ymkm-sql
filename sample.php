@@ -1,9 +1,6 @@
 <?php
     ini_set('html_errors', true);
-    require_once('Zend/Loader/Autoloader.php');
-    $autoloader = Zend_Loader_Autoloader::getInstance();
-    $autoloader->registerNamespace('YMKM_');
-    $autoloader->setFallbackAutoloader(true);
+    require_once('YMKM/Query.php');
 
     $builder = YMKM_Query::create()
             ->addCol('t1.foo')->addCol('t1.bar')

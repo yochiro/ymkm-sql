@@ -5,6 +5,27 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Domain.php');
+require_once(__DIR__.'/Entity/From.php');
+require_once(__DIR__.'/Entity/Group.php');
+require_once(__DIR__.'/Entity/Having.php');
+require_once(__DIR__.'/Entity/Join.php');
+require_once(__DIR__.'/Entity/Limit.php');
+require_once(__DIR__.'/Entity/Order.php');
+require_once(__DIR__.'/Entity/Select.php');
+require_once(__DIR__.'/Entity/Where.php');
+require_once(__DIR__.'/Query/Abstract.php');
+require_once(__DIR__.'/Statement/From.php');
+require_once(__DIR__.'/Statement/Group.php');
+require_once(__DIR__.'/Statement/Having.php');
+require_once(__DIR__.'/Statement/Join.php');
+require_once(__DIR__.'/Statement/Limit.php');
+require_once(__DIR__.'/Statement/Order.php');
+require_once(__DIR__.'/Statement/Select.php');
+require_once(__DIR__.'/Statement/Where.php');
+
+
 /**
  * Implementation of an SQL query class
  *

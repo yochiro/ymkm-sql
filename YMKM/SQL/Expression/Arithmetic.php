@@ -5,6 +5,10 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractArithmetic.php');
+
+
 /**
  * Stateful class which defines and arithmetic SQL expression
  *

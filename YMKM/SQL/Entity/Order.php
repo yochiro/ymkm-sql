@@ -5,6 +5,12 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractOrder.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Iface/OrderAware.php');
+
+
 /**
  * Stateful class which defines entities valid inside a ORDER BY part of an SQL query
  *

@@ -5,6 +5,11 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/Abstract.php');
+require_once(__DIR__.'/../Iface/FromAware.php');
+
+
 /**
  * Abstract class which defines entities valid inside a JOIN part of an SQL query
  *

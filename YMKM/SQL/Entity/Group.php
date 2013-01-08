@@ -5,6 +5,12 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractGroup.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Iface/GroupAware.php');
+
+
 /**
  * Stateful class which defines entities valid inside a GROUP BY part of an SQL query
  *

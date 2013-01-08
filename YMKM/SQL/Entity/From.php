@@ -5,6 +5,12 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractFrom.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Iface/FromAware.php');
+
+
 /**
  * Stateful class which defines entities valid inside a FROM part of an SQL query
  *

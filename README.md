@@ -29,13 +29,13 @@ MIT
 
 This library requires PHP 5.3+ , as it heavily uses Closures.
 
-## Dependency :
-
-- Zend, for `Zend_Loader`
-
 ## Usage
 
-The SQL query can be built using the main class `Query_Builder`; it has a fluent interface.
+Import the `YMKM_Query` module :
+
+	require_once('YMKM/Query.php');
+
+The SQL query can be built using the main class `Query_Builder`; it has a fluent interface.    
 
 ### Create a new Builder
 

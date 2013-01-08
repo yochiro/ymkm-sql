@@ -5,6 +5,12 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractSelect.php');
+require_once(__DIR__.'/../Domain.php');
+require_once(__DIR__.'/../Iface/SelectAware.php');
+
+
 /**
  * Stateful class which defines entities valid inside a SELECT part of an SQL query
  *

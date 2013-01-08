@@ -5,6 +5,12 @@
  * @author Yoann Mikami <yoann@ymkm.org>
  */
 
+
+require_once(__DIR__.'/AbstractTableDefinition.php');
+require_once(__DIR__.'/TableReference.php');
+require_once(__DIR__.'/../Domain.php');
+
+
 /**
  * Stateful class which defines an SQL expression for a table definition
  *
@@ -70,6 +76,6 @@ final class YMKM_SQL_Expression_TableDefinition
 
     protected function doToTableReference()
     {
-        return new YMKM_SQL_Expression_TableRefeference($this->alias());
+        return new YMKM_SQL_Expression_TableReference($this->alias());
     }
 }

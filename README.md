@@ -12,10 +12,13 @@ This syntax makes the parsing and composition easy, as `<expr>` can either be a 
 ie. the same input recognized by `addWhere`.
 
 For instance, the following example
+
 	$builder->addWhere(YMKM_Query::and_(),
 				array(YMKM_Query::eq(), 't1.col', '=foo'),
 				array(YMKM_Query::ge(), 't2.col', '=10))
+
 will produce the following SQL part :
+
 	WHERE t1.col = 'foo' AND t2.col >= 10
 
 ## Licence
